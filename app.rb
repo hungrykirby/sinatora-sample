@@ -1,10 +1,8 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'sass'
 
 get '/' do
-  'hello Bye'
-end
-
-get '/erb_template_page' do
-  erb :erb_template_page
+  @title = 'index'
+  erb :index
 end

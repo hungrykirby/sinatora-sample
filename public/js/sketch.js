@@ -1,33 +1,21 @@
-var bug;
+var s = function( sketch ) {
 
-function setup() {
-    createCanvas(windowWidth, windowHeight);
-    bug = new Jitter();
-}
+  var x = 100; 
+  var y = 100;
 
-function draw() {
-  background(200);
-  bug.move();
-  bug.display();
-}
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
-
-// Jitter class
-function Jitter() {
-  this.x = random(width);
-  this.y = random(height);
-  this.diameter = random(10, 30);
-  this.speed = 1;
-
-  this.move = function() {
-    this.x += random(-this.speed, this.speed);
-    this.y += random(-this.speed, this.speed);
+  sketch.setup = function() {
+    sketch.createCanvas(sketch.windowWidth, sketch.windowHeight);
   };
 
-  this.display = function() {
-    ellipse(this.x, this.y, this.diameter, this.diameter);
+  sketch.windowResized = function() {
+    sketch.resizeCanvas(sketch.windowWidth, sketch.windowHeight);
   }
+
+  sketch.draw = function() {
+    sketch.background(0);
+    sketch.fill(255);
+    sketch.rect(sketch.windowWidth/10,y,50,50);
+  };
 };
+
+var myp5 = new p5(s, document.getElementById('p5sketch'));

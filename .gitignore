@@ -12,3 +12,4 @@ vendor/bundle
 .env
 .DS_Store
 logfile
+/.vscode

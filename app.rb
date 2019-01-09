@@ -3,6 +3,6 @@ require 'sinatra/reloader'
 require 'sass'
 
 get '/' do
-  @title = 'index'
+  @title = 'きゃりかつルーム'
   erb :index
 end

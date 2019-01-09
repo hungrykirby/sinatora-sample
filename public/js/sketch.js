@@ -3,12 +3,16 @@ var s = function( sketch ) {
   var x = 100; 
   var y = 100;
 
+  let w = 0;
+
   sketch.setup = function() {
-    sketch.createCanvas(sketch.windowWidth, sketch.windowHeight);
+    w = sketch.windowWidth*0.6;
+    sketch.createCanvas(w, sketch.windowHeight);
   };
 
   sketch.windowResized = function() {
-    sketch.resizeCanvas(sketch.windowWidth, sketch.windowHeight);
+    w = sketch.windowWidth*0.6;
+    sketch.resizeCanvas(w, sketch.windowHeight);
   }
 
   sketch.draw = function() {

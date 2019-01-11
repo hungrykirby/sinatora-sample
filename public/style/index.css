@@ -1,0 +1,80 @@
+a{
+  font-size: 0.8rem;
+}
+h2{
+  /* background: #7f7f7f; */
+}
+.body-wrapper{
+  display: -webkit-flex;
+  display: flex;
+
+  position: absolute;
+  width: 100%;
+}
+
+.body-wrapper #p5sketch{
+  width: 60%;
+  height: 100%;
+}
+
+
+.body-wrapper .main{
+  width: 40%;
+  background: #fff;
+  text-align: center;
+  position: absolute;
+  left: 60%;
+  padding-bottom: 20px;
+}
+.chatchcopy{
+  /* font-size: 1rem; */
+  padding: 2em 0px;
+}
+
+#p5sketch{
+  position: fixed;
+}
+#p5sketch canvas{
+  /*position:fixed;*/
+  top:0;
+  left:0;
+  z-index: 3;
+  width: 100% !important;
+  height: 100vh;
+}
+@media screen and (max-width:640px) {
+  .body-wrapper .main{
+    width: 100%;
+    left: 0%;
+  }
+  #p5sketch{
+    display: none;
+  }
+}
+/* ここからmainの中身：worksが最初に来ている */
+.listimgs > ul > li{
+  display: flex;
+  display: -webkit-flex;
+  padding: 10px;
+}
+.listimgs > ul > li > div{
+  text-align: left;
+}
+.listimgs > ul > li > div > p{
+  /* font-size: 1.3rem */
+}
+.listimgs > ul > li > img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  padding: 0px 10px;
+}
+#award + div > ul{
+  padding-left: 20px;
+}
+#award + div > ul > li{
+  text-align: left;
+  border-left: solid 2px orange;
+  padding: 0em 0.5em;
+  margin: 5px 0;
+}

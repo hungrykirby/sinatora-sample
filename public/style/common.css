@@ -1,5 +1,6 @@
 * {
   color: #3e3e3e;
+  font-family: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
 }
 body, html{
   width: 100%;
@@ -14,18 +15,38 @@ h2{
   font-size: 1.5rem;
   padding: 2em 0 1em;
 }
-
+section{
+  height: 100%;
+}
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+footer{
+  /* position: absolute;
+  bottom: 0px;
+  left: 60vw; */
+}
 
 /* ヘッダー部分の制御、PCでもスマホでも固定だがデザインが全然違くなるので注意 */
 header{
   padding: 20px;
   border-bottom: #555 solid 2px;
+  height: 50px;
+  position: fixed;
+  width: calc(100% - 41px);
+  background: #fff;
+  z-index: 9;
 }
 @media screen and (min-width:641px) {
   header{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+  }
+  .fromtop{
+    top: 90px;
   }
   header > nav{
     width: 55%;
@@ -43,8 +64,21 @@ header{
 }
 @media screen and (max-width:640px) {
   /* ここからはスマホです。スマホではハンバーガーメニュー、PCでは固定ヘッダーです */
+  header {
+    height: 38px;
+    padding: 10px;
+    width: calc(100% - 21px);
+  }
+  header h1{
+    float: right;
+    margin-right: calc(50% - 128px);/*画面幅の半分-文字領域の半分*/
+  }
+  .fromtop{
+    top: 60px;
+  }
   header > nav{
     position: relative;
+    padding: 8px 0px;
   }
   .nav-unshown{
     display: none;
@@ -111,41 +145,4 @@ header{
     transform: translateX(0%);/*中身を表示（右へスライド）*/
     box-shadow: 6px 0 25px rgba(0,0,0,.15);
   }
-}
-
-.body-wrapper{
-  display: -webkit-flex;
-  display: flex;
-  height: 100%;
-}
-
-.body-wrapper #p5sketch{
-  width: 60%;
-  height: 100%;
-}
-
-
-.body-wrapper .main{
-  width: 40%;
-  height: 100%;
-  background: #fff;
-  text-align: center;
-}
-.chatchcopy{
-  /* font-size: 1rem; */
-  padding: 2em 0px;
-}
-
-@media screen and (max-width:640px) {
-  #p5sketch{
-    display: none;
-  }
-}
-#p5sketch canvas{
-  /*position:fixed;*/
-  top:0;
-  left:0;
-  z-index: 100;
-  /*width: 60% !important;*/
-  height: 100vh;
 }

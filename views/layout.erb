@@ -6,6 +6,9 @@
   <title>carry_hany</title>
   <link rel="stylesheet" href="/style/reset.css" />
   <link rel="stylesheet" href="/style/common.css" />
+  <% if @is_top %>
+    <link rel="stylesheet" href="/style/index.css">
+  <% end %>
 </head>
 
 <body>
@@ -20,12 +23,14 @@
           <li>About</li>
           <li>Works</li>
           <li>Awards</li>
+          <li>Talk</li>
           <li>Contacts</li>
         </ul>
       </div>
     </nav>
   </header>
     <%= yield %>
+  <div class="clearfix"></div>
   <footer>
     <address>Copyright(C)塙克樹,Allright Reserved.</address>
   </footer>

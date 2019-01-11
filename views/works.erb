@@ -1,3 +1,30 @@
-<div class="fromtop">
-    <%= @name %>
+<div class="fromtop works-contents-wrapper <%= @classname %>">
+    <h2><%= @name %></h2>
+    <img src="<%= @main_pic %>" alt="">
+
+    <div class="date"><p><%= @date %></p></div>
+    
+    <h3 style="border-left: 2px solid <%= @blcolor %>;">コンセプト</h3>
+    <div class="main concepts"><%= @contents %></div>
+
+    <h3 style="border-left: 2px solid <%= @blcolor %>;">メンバー</h3>
+    <div class="main members"><%= @members %></div>
+    
+    <h3 style="border-left: 2px solid <%= @blcolor %>;">やくわり</h3>
+    <div class="main role"><%= @role %></div>
+    
+    <h3 style="border-left: 2px solid <%= @blcolor %>;">発表時の段階</h3>
+    <div class="main process"><%= @process %></div>
+    
+    <h3 style="border-left: 2px solid <%= @blcolor %>">使用言語、技術、フレームワーク</h3>
+    <div class="main language"><%= @language %></div>
+    
+    <h3 style="border-left: 2px solid <%= @blcolor %>;">関連リンク</h3>
+    <div class="otherlinks">
+        <ul>
+        <% @links.each do |l| %>
+            <li><a href="<%= l['uri'] %>" target="_blank" rel="noopener noreferrer"><%= l['text'] %></a></li>
+        <% end %>
+        </ul>
+    </div>
 </div>

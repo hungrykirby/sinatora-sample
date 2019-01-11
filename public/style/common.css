@@ -11,9 +11,20 @@ h1{
   text-align: center;
   font-size: 2rem;
 }
+h1 > a{
+  font-size: inherit;
+  text-decoration: none;
+  color: #3e3e3e;
+}
 h2{
   font-size: 1.5rem;
   padding: 2em 0 1em;
+}
+h3{
+  font-size: 1.5rem;
+  /* border-left: orange 2px solid; */
+  padding-left: 10px;
+  margin: 2em 0 1em;
 }
 section{
   height: 100%;
@@ -148,4 +159,19 @@ header{
     transform: translateX(0%);/*中身を表示（右へスライド）*/
     box-shadow: 6px 0 25px rgba(0,0,0,.15);
   }
+}
+
+/* ここにはworksなど画像が上に来るページの中身のデザインを記述します */
+.works-contents-wrapper{
+  width: 600px;
+  margin: auto;
+}
+.works-contents-wrapper img{
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+}
+.works-contents-wrapper div > p{
+  padding-bottom: 12px;
+  font-size: .9rem;
 }

@@ -18,6 +18,9 @@ h2{
 section{
   height: 100%;
 }
+address{
+  font-size: 0.5rem;
+}
 .clearfix::after{
   content: "";
   display: block;
@@ -46,7 +49,7 @@ header{
     align-items: flex-end;
   }
   .fromtop{
-    top: 90px;
+    padding-top: 90px;
   }
   header > nav{
     width: 55%;
@@ -74,7 +77,7 @@ header{
     margin-right: calc(50% - 128px);/*画面幅の半分-文字領域の半分*/
   }
   .fromtop{
-    top: 60px;
+    padding-top: 60px;
   }
   header > nav{
     position: relative;

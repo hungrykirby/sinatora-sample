@@ -34,7 +34,9 @@
   <footer>
     <address>Copyright(C)塙克樹,Allright Reserved.</address>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
-  <script src="/js/sketch.js"></script>
+  <% if @is_top %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+    <script src="/js/sketch.js"></script>
+  <% end %>
 </body>
 </html>

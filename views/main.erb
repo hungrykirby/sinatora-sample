@@ -16,6 +16,14 @@
                     <li><%= m %></li>
                 <% end %>
             </ul>
+        <% elsif c['type'] == 'ul_gray' %>
+            <div class="rowlist">
+                <ul>
+                    <% c['main_list'].each do |m| %>
+                        <li><%= m %></li>
+                    <% end %>
+                </ul>
+            </div>
         <% end %>
     <% end %>
 </div>

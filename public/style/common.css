@@ -22,7 +22,7 @@ h2{
 }
 h3{
   font-size: 1.5rem;
-  /* border-left: orange 2px solid; */
+  border-left: orange 2px solid;
   padding-left: 10px;
   margin: 2em 0 1em;
 }
@@ -72,15 +72,20 @@ header{
     display: flex;
     justify-content: flex-end;
   }
+  nav > #nav-content > ul > li a{
+    font-size: 1.0rem;
+  }
   nav > #nav-content > ul > li{
     margin-left: 5%;
     border-bottom: 2px solid transparent;
   }
-  nav > #nav-content > ul > li:hover{
-    border-bottom: blue 2px solid;
+  nav > #nav-content > ul > li:hover a{
+    /* border-bottom: blue 2px solid; */
+    color: coral;
   }
-  nav > #nav-content > ul > li.is_select{
+  nav > #nav-content > ul > li.is_select a{
     color: orange;
+    text-decoration: none;
     /* border-bottom: 2px orange solid; */
   }
 }
@@ -170,6 +175,9 @@ header{
 }
 
 /* ここにはworksなど画像が上に来るページの中身のデザインを記述します */
+.date {
+  font-size: .75rem;
+}
 .works-contents-wrapper, .main-contents-wrapper{
   width: 600px;
   margin: auto;
@@ -199,6 +207,42 @@ header{
   height: 100px;
   object-fit: cover;
 }
+.rowlist ul {
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+.rowlist ul li{
+  margin-right: 6px;
+  margin-bottom: 6px;
+  padding: 6px;
+  background: #eee;
+  border-radius: 3px;
+}
+
+/* Aboutとかそのへん */
 .main-contents-wrapper ul li{
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.main-contents-wrapper > img:first-of-type{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.main-contents-wrapper ul li span:first-child:after{
+  content: '：'
+}
+.main-contents-wrapper ul li span:first-child{
+  width: 70%;
+  display: inline-block;
+}
+.main-contents-wrapper ul li span:last-child{
+  font-weight: 700;
+  display: inline-block;
+  width: 25%;
+}
+.main-contents-wrapper p{
   padding: 6px 0px;
 }

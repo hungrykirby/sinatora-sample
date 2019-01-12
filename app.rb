@@ -17,16 +17,61 @@ get '/about' do
       'main'=>'プロフィール'
     },
     {
+      'type'=>'img',
+      'uri'=>'/img/noimg.jpg',
+      'alt'=>'プロフィール画像'
+    },
+    {
       'type'=>'p',
-      'main'=>'生真面目と言わるほど真面目なエンジニア\n
-      ハード、ソフト、サーバ、フロントなど割と幅広くこなす。\n
-      個人的にはプロトタイプエンジニアと自称したい\n
+      'main'=>'生真面目と言わるほど真面目なエンジニア'
+    },
+    {
+      'type'=>'p',
+      'main'=>'ハード、ソフト、サーバ、フロントなど割と幅広くこなす。\n
+      機械学習も少しかじった。\n
+      個人的にはプロトタイプエンジニアと自称したい。\n
       pythonでLINE botを作ったり、phpとwordpressをいじったり、Rubyでサイトを作ったりしている。\n
       このサイトは勉強用にsinatraというフレームワークを使い、Rubyで書いている。\n
       大学時代はHCI系の研究室に所属していて、ArduinoやopenFrameworks、Processingなどの言語で遊ぶのが好きだった。\n
       卒論研究はArduinoとoF、修論研究はArduino、Processing、pythonを使っている。\n
-      修論ではArduinoと接続した14のセンサから、pythonで機械学習をしたので「修論では機械学習を用いて研究しました！」というわりとすごそうに聞こえる経歴がある。\n
-     '.gsub('\n', '<br>').gsub('\r', 'aa')
+      修論ではArduinoと接続した14のセンサから、pythonで機械学習をしたので「修論では機械学習を用いて研究しました！」というわりとすごそうに聞こえる経歴がある。'.gsub('\n', '<br>').gsub('\r', '<br>')
+    },
+    {
+      'type'=>'p',
+      'main'=>'趣味はイラスト。ピカチュウやハム太郎など一般的にかわいいと言われるキャラクターが好き。'.gsub('\n', '<br>').gsub('\r', '<br>')
+    },
+    {
+      'type'=>'p', 'main'=>'過去3度程度、強い抑うつ状態になった経験から、メンタルヘルスに関する関心が強い。'.gsub('\n', '<br>').gsub('\r', '<br>')
+    },
+    {
+      'type'=>'p','main'=>'早稲田大学基幹理工学研究科表現工学専攻橋田朋子研究室卒業。\n
+      ペーパーコンピューティングや新しい時代のコミュニケーション、プログラミング場面の拡張などをテーマに研究していた。
+     '.gsub('\n', '<br>').gsub('\r', '<br>')
+    },
+    {
+      'type'=>'h3',
+      'main'=>'使用言語'
+    },
+    {
+      'type'=>'ul_gray',
+      'main_list'=>[
+        'Python', 'Ruby', 'php', 'javascript', 'html', 'css', 'C++', 'Processing', 'openFrameworks', 'Arduino', 'node.js'
+      ]
+    },
+    {
+      'type'=>'h3','main'=>'受賞歴'
+    },
+    {
+      'type'=>'ul',
+      'main_list'=>[
+        '<span>楽天温泉ハッカソン</span><span>優勝</span>',
+        '<span>早稲田地図アプリコンテスト</span><span>若手科学者賞</span>',
+        '<span>電子情報通信学会MVE研究会</span><span>MVE賞</span>',
+        '<span>TECH LAB PAAK</span><span>TECH LAB PAAK賞</span>',
+        '<span>Fintech Challenge 2016 – Bring Your Own Bank!</span><span>ぐるなび賞</span>',
+        '<span>エスキュービジム IoT×お笑いハッカソン</span><span>技術があるで賞</span>',
+        '<span>学生CGコンテスト</span><span>ファイナリスト</span>'
+      ]
     },
     {
       'type'=>'h3',
@@ -534,11 +579,12 @@ get '/works/*' do |worksname|
     @blcolor = 'rgb(190, 160, 160)'
     @place = '講義(インタラクティブセンシング)'
     @categories = category_list.push('講義', 'ハードウェア')
+    @role = 'ソフトウェアエンジニア(Twitter API)'
     @members = member_list.push('佐々木')
     @language = language_list.push('Arduino', 'Twitter API')
     @otherpics = nil
-    @link = link_list.push(
-      {'text'=>'インタラクティブセンシング', 'uri'=>'http://interactivesensing2014.tumblr.com/post/92718374430/dancing-with-twitter'}
+    @links = link_list.push(
+      {'text'=>'インタラクティブセンシング2014', 'uri'=>'http://interactivesensing2014.tumblr.com/post/92718374430/dancing-with-twitter'}
     )
     @contents = '<p>Twitterの情報を目でみえる動きと耳で聞こえる音で表現しデータの偶然性が作り出す不規則な動きを表現する。</p>'
   else

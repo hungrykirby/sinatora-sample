@@ -20,11 +20,11 @@
       <label for="nav-input" id="nav-close" class="nav-unshown"></label>
       <div id="nav-content">
         <ul>
-          <li>About</li>
-          <li>Works</li>
-          <li>Awards</li>
-          <li>Talk</li>
-          <li>Contacts</li>
+          <li class="<%= 'is_select' if @navtype == 'about' %>">About</li>
+          <li class="<%= 'is_select' if @navtype == 'work' %>">Work</li>
+          <li class="<%= 'is_select' if @navtype == 'award' %>">Award</li>
+          <li class="<%= 'is_select' if @navtype == 'talk' %>">Talk</li>
+          <li class="<%= 'is_select' if @navtype == 'contact' %>">Contact</li>
         </ul>
       </div>
     </nav>

@@ -1,0 +1,21 @@
+<div class="fromtop main-contents-wrapper">
+    <% @contents.each do |c| %>
+        <% if c['type'] == 'p' %>
+            <p><%= c['main'] %></p>
+        <% elsif c['type'] == 'div' %>
+            <div><%= c['main'] %></div>
+        <% elsif c['type'] == 'a' %>
+            <a href="<%= c['uri'] %>" target="<%= c['targettype'] %>"><%= c['main'] %></a>
+        <% elsif c['type'] == 'img' %>
+            <img src="<%= c['uri'] %>" alt="<%= c['alt'] %>">
+        <% elsif c['type'] == 'h3' %>
+            <h3><%= c['main'] %></h3>
+        <% elsif c['type'] == 'ul' %>
+            <ul>
+                <% c['main_list'].each do |m| %>
+                    <li><%= m %></li>
+                <% end %>
+            </ul>
+        <% end %>
+    <% end %>
+</div>

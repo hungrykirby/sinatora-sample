@@ -74,6 +74,14 @@ header{
   }
   nav > #nav-content > ul > li{
     margin-left: 5%;
+    border-bottom: 2px solid transparent;
+  }
+  nav > #nav-content > ul > li:hover{
+    border-bottom: blue 2px solid;
+  }
+  nav > #nav-content > ul > li.is_select{
+    color: orange;
+    /* border-bottom: 2px orange solid; */
   }
 }
 @media screen and (max-width:640px) {
@@ -162,7 +170,7 @@ header{
 }
 
 /* ここにはworksなど画像が上に来るページの中身のデザインを記述します */
-.works-contents-wrapper{
+.works-contents-wrapper, .main-contents-wrapper{
   width: 600px;
   margin: auto;
 }
@@ -173,5 +181,24 @@ header{
 }
 .works-contents-wrapper div > p{
   padding-bottom: 12px;
-  font-size: .9rem;
+}
+.concepts ol li{
+  list-style-type: lower-greek;
+  margin-left: 40px;
+}
+.otherpics ul{
+  display: -webkit-flex;
+  display: flex;
+}
+.otherpics ul li{
+  width: 30%;
+  margin-right: 3%;
+}
+.otherpics ul li img{
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+.main-contents-wrapper ul li{
+  padding: 6px 0px;
 }

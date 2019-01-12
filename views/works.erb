@@ -1,4 +1,5 @@
 <div class="fromtop works-contents-wrapper <%= @classname %>">
+    <% if @contents %>
     <h2><%= @name %></h2>
     <img src="<%= @main_pic %>" alt="">
 
@@ -8,17 +9,58 @@
     <div class="main concepts"><%= @contents %></div>
 
     <h3 style="border-left: 2px solid <%= @blcolor %>;">メンバー</h3>
-    <div class="main members"><%= @members %></div>
+    <div class="main members rowlist">
+        <ul>
+        <% @members.each do |member| %>
+            <li><%= member %></li>
+        <% end %>
+        </ul>
+    </div>
+
+    <% if @prizes %>
+    <h3 style="border-left: 2px solid <%= @blcolor %>;">賞</h3>
+    <div class="main members"><%= @prizes %></div>
+    <% end %>
     
     <h3 style="border-left: 2px solid <%= @blcolor %>;">やくわり</h3>
     <div class="main role"><%= @role %></div>
     
+    <h3 style="border-left: 2px solid <%= @blcolor %>;">カテゴリー</h3>
+    <div class="main category rowlist">
+        <ul>
+        <% @categories.each do |c| %>
+            <li><%= c %></li>
+        <% end %>
+        </ul>
+    </div>
+    
+    <h3 style="border-left: 2px solid <%= @blcolor %>;">発表場所</h3>
+    <div class="main place"><%= @place %></div>
+    
     <h3 style="border-left: 2px solid <%= @blcolor %>;">発表時の段階</h3>
     <div class="main process"><%= @process %></div>
     
+    <% if @language %>
     <h3 style="border-left: 2px solid <%= @blcolor %>">使用言語、技術、フレームワーク</h3>
-    <div class="main language"><%= @language %></div>
-    
+    <div class="main language rowlist">
+        <ul>
+        <% @language.each do |lan| %>
+            <li><%= lan %></li>
+        <% end %>
+        </ul>
+    </div>
+    <% end %>
+
+    <% if @otherpics %>
+    <h3 style="border-left: 2px solid <%= @blcolor %>;">参考写真</h3>
+    <div class="otherpics">
+        <ul>
+        <% @otherpics.each do |l| %>
+            <li><img src="<%= l %>" alt=""></li>
+        <% end %>
+    </div>
+    <% end %>
+
     <h3 style="border-left: 2px solid <%= @blcolor %>;">関連リンク</h3>
     <div class="otherlinks">
         <ul>
@@ -27,4 +69,7 @@
         <% end %>
         </ul>
     </div>
+
+    <% else %>
+    <% end %>
 </div>

@@ -24,6 +24,16 @@
                     <% end %>
                 </ul>
             </div>
+        <% elsif c['type'] == 'table' %>
+            <table>
+                <% c['main_list'].each do |m| %>
+                    <tr>
+                        <% m.each do |_m| %>
+                            <td><%= _m %></td>
+                        <% end %>
+                    </tr>
+                <% end %>
+            </table>
         <% end %>
     <% end %>
 </div>

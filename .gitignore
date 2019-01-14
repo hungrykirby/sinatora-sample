@@ -12,4 +12,6 @@ vendor/bundle
 .env
 .DS_Store
 logfile
+
 /.vscode
+serverless-output.yaml

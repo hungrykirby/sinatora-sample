@@ -14,7 +14,7 @@ get '/about' do
   @contents = [
     {
       'type'=>'h3',
-      'main'=>'プロフィール'
+      'main'=>'塙 克樹'
     },
     {
       'type'=>'img',
@@ -91,6 +91,83 @@ get '/about' do
     }
   ]
   erb :main
+end
+
+get '/award' do
+  @title = 'きゃりかつルーム'
+  @navtype = 'award'
+  @contents = [
+    {
+      'type'=>'table',
+      'main_list'=>[
+        ['発表場所', '賞', '作品名'],
+        ['楽天温泉ハッカソン', '優勝', 'Gra-Navi'],
+        ['第3回早稲田地図アプリコンテスト', '若手科学者賞', 'Gra-Navi'],
+        ['2016年電子情報通信学会MVE研究会', 'MVE賞', '磁性シートの磁力制御に基づく積層させた複数紙面への同時描画システム'],
+        ['TECH LAB PAAK', 'TECH LAB PAAK賞', 'Delter'],
+        ['Fintech Challenge 2016 – Bring Your Own Bank!', 'ぐらなび賞', 'API map for personalize'],
+        ['エスキュービジム IoT×お笑いハッカソン', '技術があるで賞', 'た（わむ）れまく'],
+        ['第24回学生CGコンテスト', 'ファイナリスト', 'Gray Switch']
+      ]
+    }
+  ]
+  erb :main
+end
+
+get '/contacts' do
+  @title = 'きゃりかつルーム'
+  @navtype = 'contact'
+  @contents = [
+    {
+      'type'=>'h3',
+      'main'=>'SNS'
+    },
+    {
+      'type'=>'a',
+      'uri'=>'https://twitter.com/hungrykirby',
+      'targettype'=>'_blank',
+      'main'=>'Twitter'
+    },
+    {
+      'type'=>'a',
+      'uri'=>'https://www.facebook.com/hungrykirby',
+      'targettype'=>'_blank',
+      'main'=>'facebook'
+    },
+    {
+      'type'=>'a',
+      'uri'=>'https://github.com/hungrykirby',
+      'targettype'=>'_blank',
+      'main'=>'Github'
+    },
+    {
+      'type'=>'a',
+      'uri'=>'https://www.wantedly.com/users/10827164',
+      'targettype'=>'_blank',
+      'main'=>'wantedly'
+    },
+    {
+      'type'=>'p',
+      'main'=>'連絡は上記SNSよりよろしくお願いします。<br>メールアドレスや電話番号、LINE情報の公開はいたしておりません。'
+    }
+  ]
+  erb :main
+end
+
+get '/talk' do
+  @navtype = 'talk'
+  @title = 'きゃりかつルーム'
+  @contents = [
+    {
+      'type'=>'h3',
+      'main'=>'準備中'
+    }
+  ]
+  erb :main
+end
+
+get '/works' do
+  redirect '/#works'
 end
 
 get '/works/*' do |worksname|
@@ -237,9 +314,9 @@ get '/works/*' do |worksname|
     @role = 'アイデア'
     @process = '展示発表'
     @blcolor = '#666'
-    @categories = category_list.push('展示').join(', ')
+    @categories = category_list.push('展示')
     @language = nil
-    @members = member_list.push('油井 俊哉', '千葉 一磨').join(', ')
+    @members = member_list.push('油井 俊哉', '千葉 一磨')
     @otherpics = ['/img/nowloading2.png', '/img/loading.gif']
     @links = link_list.push(
       {

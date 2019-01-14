@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes">
-  <title>carry_hany</title>
+  <title><%= @title %></title>
   <link rel="stylesheet" href="/style/reset.css" />
   <link rel="stylesheet" href="/style/common.css" />
   <% if @is_top %>
@@ -24,7 +24,7 @@
           <li class="<%= 'is_select' if @navtype == 'work' %>"><a href="/works">Works</a></li>
           <li class="<%= 'is_select' if @navtype == 'award' %>"><a href="/award">Award</a></li>
           <li class="<%= 'is_select' if @navtype == 'talk' %>"><a href="/talk">Talk</a></li>
-          <li class="<%= 'is_select' if @navtype == 'contact' %>"><a href="/contacts">Contact</a></li>
+          <li class="<%= 'is_select' if @navtype == 'contact' %>"><a href="/contacts">Contacts</a></li>
         </ul>
       </div>
     </nav>

@@ -246,3 +246,17 @@ header{
 .main-contents-wrapper p{
   padding: 6px 0px;
 }
+.main-contents-wrapper table{
+  width: 100%;
+  margin-top: 12px;
+}
+.main-contents-wrapper table tr td{
+  width: 33%;
+  border: #3e3e3e solid 1px;
+}
+.main-contents-wrapper table tr:first-child{
+  background: #eee;
+}
+.main-contents-wrapper table tr:not(:first-child) td{
+  font-size: 0.8rem;
+}

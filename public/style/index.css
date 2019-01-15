@@ -1,9 +1,10 @@
-a{
-  font-size: 0.8rem;
-}
 h2{
-  /* background: #7f7f7f; */
+  margin-left: 20px;
 }
+a:hover{
+  color: orange;
+}
+
 .body-wrapper{
   display: -webkit-flex;
   display: flex;
@@ -42,13 +43,20 @@ h2{
   width: 100% !important;
   height: 100vh;
 }
-@media screen and (max-width:640px) {
+
+@media screen and (max-width:960px) {
   .body-wrapper .main{
-    width: 100%;
-    left: 0%;
+    width: 600px;
+    margin: auto;
+    position: static;
   }
   #p5sketch{
     display: none;
+  }
+}
+@media screen and (max-width:640px) {
+  .body-wrapper .main{
+    width: 100%;
   }
 }
 /* ここからmainの中身：worksが最初に来ている */
@@ -56,18 +64,58 @@ h2{
   display: flex;
   display: -webkit-flex;
   padding: 10px;
+
+  position: relative;
+  z-index: 1;
+
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
-.listimgs > ul > li > div{
+.listimgs > ul > li:hover{
+  background: #eee;
+}
+.listimgs > ul > li > div:not(.imgwrapper){
   text-align: left;
+  width: calc(100% - 150px - 20px);
 }
-.listimgs > ul > li > div > p{
+.listimgs > ul > li > div:not(.imgwrapper) > p{
   /* font-size: 1.3rem */
 }
-.listimgs > ul > li > img{
-  width: 100px;
-  height: 100px;
+.listimgs > ul > li > div:not(.imgwrapper) > a{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-indent:-999px;
+  z-index: 2;
+}
+.listimgs > ul > li > div.imgwrapper{
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  margin: 0px 10px;
+}
+.listimgs > ul > li > .imgwrapper > img{
+  width: 150px;
+  height: 150px;
   object-fit: cover;
-  padding: 0px 10px;
+
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.listimgs > ul > li:hover > .imgwrapper > img{
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 #award + div > ul{
   padding-left: 20px;

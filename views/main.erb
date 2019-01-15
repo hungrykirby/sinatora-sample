@@ -10,6 +10,8 @@
             <img src="<%= c['uri'] %>" alt="<%= c['alt'] %>">
         <% elsif c['type'] == 'h3' %>
             <h3><%= c['main'] %></h3>
+        <% elsif c['type'] == 'h2' %>
+            <h2><%= c['main'] %></h2>
         <% elsif c['type'] == 'ul' %>
             <ul>
                 <% c['main_list'].each do |m| %>

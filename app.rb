@@ -17,7 +17,7 @@ get '/about' do
   @navtype = 'about'
   @contents = [
     {
-      'type'=>'h3',
+      'type'=>'h2',
       'main'=>'塙 克樹'
     },
     {
@@ -53,7 +53,7 @@ get '/about' do
      '.gsub('\n', '<br>').gsub('\r', '<br>')
     },
     {
-      'type'=>'h3',
+      'type'=>'h2',
       'main'=>'使用言語'
     },
     {
@@ -63,7 +63,7 @@ get '/about' do
       ]
     },
     {
-      'type'=>'h3','main'=>'受賞歴'
+      'type'=>'h2','main'=>'受賞歴'
     },
     {
       'type'=>'ul',
@@ -78,14 +78,13 @@ get '/about' do
       ]
     },
     {
-      'type'=>'h3',
+      'type'=>'h2',
       'main'=>'生い立ち'
     },
     {
       'type'=>'ul',
       'main_list'=>[
-        '1993年11月21日生まれ',
-        '2000年栃木県河内町田原西小学校入学',
+        '1993年11月21日栃木県に生まれる',
         '2006年大宮開成中高一貫校入学',
         '2012年早稲田大学入学',
         '2016年早稲田大学期間理工学研究科表現工学専攻入学',
@@ -123,7 +122,7 @@ get '/contacts' do
   @navtype = 'contact'
   @contents = [
     {
-      'type'=>'h3',
+      'type'=>'h2',
       'main'=>'SNS'
     },
     {
@@ -163,7 +162,7 @@ get '/talk' do
   @title = 'きゃりかつルーム'
   @contents = [
     {
-      'type'=>'h3',
+      'type'=>'h2',
       'main'=>'準備中'
     }
   ]
@@ -310,7 +309,7 @@ get '/works/*' do |worksname|
     <p>
     この作品群は学生CGコンテストでファイナリストにノミネートされている
     </p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/IjyW11fZpSU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    <div class="video"><iframe src="https://www.youtube.com/embed/IjyW11fZpSU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
   elsif worksname == 'nowloading'
     @main_pic = '/img/nowloading3.png'
     @name = 'Now Loading'
@@ -351,7 +350,7 @@ get '/works/*' do |worksname|
     @contents = '<p>“コンピュータ上のアイコンは、直感的にするために現実世界の何かに似せていました。ですが最近ではアイコンは情報世界独自のものへと変わりつつ有ります。この情報世界独自のアイコンを現実世界に回帰させるとどうなるでしょうか。”</p><br>
     <p>スキュモーフィズムの逆として、デジタルで一般的になったアイコンを実世界に戻す試み。ローディングのマークは昔は砂時計を真似ていたが、いつのまにか丸いサークルの形が定着した。そのサークル型のローディングマークのステッカーを作り、日常の様々な風景に貼って実世界上の物事のニュアンスをデジタルのマークで上書きをする運動である。</p><br>
     <p>2016年東京デザイナーズウィークで橋田朋子研究室のHELLO HUMAN, GOODBYE HUMAN 機械から始まるインタラクション展の一部として展示</p><br>
-    <iframe src="https://player.vimeo.com/video/263627671" width="640" height="360" frameborder="0" allowfullscreen></iframe>'
+    <div class="video"><iframe src="https://player.vimeo.com/video/263627671" frameborder="0" allowfullscreen></iframe></div>'
   elsif worksname == 'tawamure'
     @main_pic = '/img/tawamure1.jpg'
     @name = 'た(わむ)れまく'
@@ -681,9 +680,9 @@ get '/works/*' do |worksname|
 end
 
 not_found do
-  "Whoops! You requested a route that wasn't available."
+  "ここにお宝はないみたいだぜ？"
 end
 
 error do
-  "Y U NO WORK?"
+  "エラーかよ…"
 end

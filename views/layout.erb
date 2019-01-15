@@ -10,6 +10,14 @@
   <% if @is_top %>
     <link rel="stylesheet" href="/style/index.css">
   <% end %>
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@hungrykirby" />
+  <meta property="og:url" content="https://sinatra-mypage.herokuapp.com/" />
+  <meta property="og:title" content="<%= @title %>" />
+  <meta property="og:description" content="<%= @title %>" />
+  <meta property="og:image" content="/img/noimg.jpg" />
+
 </head>
 
 <body>

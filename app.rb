@@ -1,6 +1,11 @@
 require 'sinatra'
 require 'sinatra/reloader'
 
+before do
+  @ogptitle = 'きゃりかつルーム'
+  @ogpdescription = '塙克樹の公式サイト？です。今までの作品をまとめて紹介するために作っています。あと自分の備忘録。'
+end
+
 get '/' do
   @title = 'きゃりかつルーム'
   @is_top = true
@@ -669,8 +674,9 @@ get '/works/*' do |worksname|
 
   if @contents
     @classname = worksname
+    @ogptitle = worksname + '：きゃりかつルーム'
   end
-  
+
   erb :works
 end
 

@@ -224,6 +224,8 @@ header{
 .otherpics ul{
   display: -webkit-flex;
   display: flex;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
 }
 .otherpics ul li, .otherworks ul li{
   width: 30%;

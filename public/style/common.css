@@ -1,3 +1,9 @@
+/*
+pikachu:rgb(255, 217, 36)
+kirby:rgb(255, 197, 227)
+*/
+
+
 * {
   color: #3e3e3e;
   font-family: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
@@ -19,20 +25,29 @@ h1{
   text-align: center;
   font-size: 2rem;
 }
+ul > li:hover a, ul > li:hover a p, a:hover{
+  color: rgb(255, 197, 227);
+}
 h1 > a{
   font-size: inherit;
   text-decoration: none;
   color: #3e3e3e;
+
+  -moz-transition: all 0s linear;
+  -webkit-transition: all 0s linear;
+  -o-transition: all 0s linear;
+  -ms-transition: all 0s linear;
+  transition: all 0s linear;
 }
 h2{
   font-size: 1.5rem;
-  border-left: black 2px solid;
+  border-left: rgb(255, 217, 36) 2px solid;
   padding-left: 10px;
   margin: 2em 0 1em;
 }
 h3{
   font-size: 1.5rem;
-  border-left: orange 2px solid;
+  border-left: rgb(255, 217, 36) 2px solid;
   padding-left: 10px;
   margin: 2em 0 1em;
 }
@@ -89,12 +104,8 @@ header{
     margin-left: 5%;
     border-bottom: 2px solid transparent;
   }
-  nav > #nav-content > ul > li:hover a{
-    /* border-bottom: blue 2px solid; */
-    color: coral;
-  }
   nav > #nav-content > ul > li.is_select a{
-    color: orange;
+    color: rgb(255, 217, 36);
     text-decoration: none;
     /* border-bottom: 2px orange solid; */
   }
@@ -211,12 +222,12 @@ header{
   display: -webkit-flex;
   display: flex;
 }
-.otherpics ul li{
+.otherpics ul li, .otherworks ul li{
   width: 30%;
   margin-right: 3%;
   overflow: hidden;
 }
-.otherpics ul li img{
+.otherpics ul li img, .otherworks ul li img{
   width: 100%;
   height: 100px;
   object-fit: cover;
@@ -233,6 +244,49 @@ header{
   padding: 6px;
   background: #eee;
   border-radius: 3px;
+}
+.otherworks ul li img{
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.otherworks ul li .imgwrapper{
+  height: 100px;
+  overflow: hidden;
+}
+.otherworks ul li:hover img{
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.otherworks ul li:hover a{
+  text-decoration: underline;
+}
+.otherworks ul li{
+  float: left;
+  height: 170px;
+}
+.otherworks ul li p{
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+
+  font-size: 0.75rem;
+}
+.otherworks ul li a{
+  text-decoration: none;
+}
+@media screen and (max-width:640px) {
+  .otherworks ul li{
+    width: 49%;
+    margin-right: 1%;
+  }
 }
 
 /* Aboutとかそのへん */

@@ -87,6 +87,9 @@ header{
   .fromtop{
     padding-top: 90px;
   }
+  .home{
+    display: none;
+  }
   header > nav{
     width: 55%;
   }

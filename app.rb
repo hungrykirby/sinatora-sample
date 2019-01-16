@@ -597,7 +597,7 @@ get '/works/*' do |worksname|
     @categories = category_list.push('ハードウェア')
     @members = member_list.push('西村 幸泰', '横田 智大')
     @language = ['Arduino']
-    @otherpics = nil
+    @otherpics = ['/img/wg2.JPG', '/img/wg3.JPG', '/img/wg4.JPG', '/img/wg5.JPG', '/img/wg6.JPG', '/img/wg7.JPG', '/img/wg8.JPG', '/img/wg9.JPG']
     @links = link_list.push(
       {
         'text'=>'WASEDAものづくりプログラム',

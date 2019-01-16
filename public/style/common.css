@@ -25,7 +25,7 @@ h1{
   text-align: center;
   font-size: 2rem;
 }
-ul > li:hover a, ul > li:hover a p, div .main-contents-wrapper a:hover{
+ul > li:hover a, ul > li:hover a p, .main-contents-wrapper a:hover{
   color: rgb(255, 197, 227);
 }
 h1 > a{

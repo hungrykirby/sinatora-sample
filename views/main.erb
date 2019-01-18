@@ -12,6 +12,8 @@
             <h3><%= c['main'] %></h3>
         <% elsif c['type'] == 'h2' %>
             <h2><%= c['main'] %></h2>
+        <% elsif c['type'] == 'h1' %>
+            <h1><%= c['main'] %></h1>
         <% elsif c['type'] == 'ul' %>
             <ul>
                 <% c['main_list'].each do |m| %>

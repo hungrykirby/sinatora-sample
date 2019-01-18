@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes">
-  <title><%= @title %></title>
+  <title><%= @ogptitle %></title>
   <link rel="stylesheet" href="/style/reset.css" />
   <link rel="stylesheet" href="/style/common.css" />
   <link rel="icon" href="/favicon.ico?ver=1847" />
@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/style/index.css">
   <% end %>
 
+  <meta name="description" content="<%= @ogpdescription %>">
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@hungrykirby" />
   <meta name="twitter:image" content="http://www.hanakatsuruby.me/img/twittercard.png" />
@@ -24,7 +25,7 @@
 
 <body>
   <header>
-    <h1><a href="/"><%= @title %></a></h1>
+    <div class="header-title"><a href="/">きゃりかつルーム</a></div>
     <nav>
       <input id="nav-input" type="checkbox" class="nav-unshown">
       <label for="nav-input" id="nav-open"><span></span></label>

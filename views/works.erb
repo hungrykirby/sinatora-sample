@@ -1,15 +1,15 @@
 <div class="fromtop works-contents-wrapper <%= @classname %>">
     <% if @contents %>
-    <h2><%= @name %></h2>
+    <h1><%= @name %></h1>
 
     <div class="date"><p><%= @date %></p></div>
 
     <img src="<%= @main_pic %>" alt="">
 
-    <h3 style="border-left: 2px solid <%= @blcolor %>;">コンセプト</h3>
+    <h2 style="border-left: 2px solid <%= @blcolor %>;">コンセプト</h2>
     <div class="main concepts"><%= @contents %></div>
 
-    <h3 style="border-left: 2px solid <%= @blcolor %>;">メンバー</h3>
+    <h2 style="border-left: 2px solid <%= @blcolor %>;">メンバー</h2>
     <div class="main members rowlist">
         <ul>
         <% @members.each do |member| %>
@@ -19,14 +19,14 @@
     </div>
 
     <% if @prizes %>
-    <h3 style="border-left: 2px solid <%= @blcolor %>;">賞</h3>
+    <h2 style="border-left: 2px solid <%= @blcolor %>;">賞</h2>
     <div class="main members"><%= @prizes %></div>
     <% end %>
 
-    <h3 style="border-left: 2px solid <%= @blcolor %>;">やくわり</h3>
+    <h2 style="border-left: 2px solid <%= @blcolor %>;">やくわり</h2>
     <div class="main role"><%= @role %></div>
 
-    <h3 style="border-left: 2px solid <%= @blcolor %>;">カテゴリー</h3>
+    <h2 style="border-left: 2px solid <%= @blcolor %>;">カテゴリー</h2>
     <div class="main category rowlist">
         <ul>
         <% @categories.each do |c| %>
@@ -35,14 +35,14 @@
         </ul>
     </div>
 
-    <h3 style="border-left: 2px solid <%= @blcolor %>;">発表場所</h3>
+    <h2 style="border-left: 2px solid <%= @blcolor %>;">発表場所</h2>
     <div class="main place"><%= @place %></div>
 
-    <h3 style="border-left: 2px solid <%= @blcolor %>;">発表時の段階</h3>
+    <h2 style="border-left: 2px solid <%= @blcolor %>;">発表時の段階</h2>
     <div class="main process"><%= @process %></div>
 
     <% if @language %>
-    <h3 style="border-left: 2px solid <%= @blcolor %>">使用言語、技術、フレームワーク</h3>
+    <h2 style="border-left: 2px solid <%= @blcolor %>">使用言語、技術、フレームワーク</h2>
     <div class="main language rowlist">
         <ul>
         <% @language.each do |lan| %>
@@ -53,7 +53,7 @@
     <% end %>
 
     <% if @otherpics %>
-    <h3 style="border-left: 2px solid <%= @blcolor %>;">参考写真</h3>
+    <h2 style="border-left: 2px solid <%= @blcolor %>;">参考写真</h2>
     <div class="otherpics">
         <ul>
         <% @otherpics.each do |l| %>
@@ -62,7 +62,7 @@
     </div>
     <% end %>
 
-    <h3 style="border-left: 2px solid <%= @blcolor %>;">関連リンク</h3>
+    <h2 style="border-left: 2px solid <%= @blcolor %>;">関連リンク</h2>
     <div class="otherlinks">
         <ul>
         <% @links.each do |l| %>
@@ -71,7 +71,7 @@
         </ul>
     </div>
 
-    <h3 style="border-left: 2px solid <%= @blcolor %>;">その他の作品</h3>
+    <h2 style="border-left: 2px solid <%= @blcolor %>;">その他の作品</h2>
     <div class="otherworks">
       <ul>
         <li>

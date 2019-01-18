@@ -17,6 +17,9 @@ get '/about' do
   @navtype = 'about'
   @contents = [
     {
+      'type'=>'h1','main'=>'塙克樹のプロフィール'
+    },
+    {
       'type'=>'h2',
       'main'=>'塙 克樹'
     },
@@ -93,6 +96,8 @@ get '/about' do
       ]
     }
   ]
+  @ogptitle = '塙克樹について：' + @title
+  @ogpdescription = '塙克樹について説明しています。塙克樹とはどんな人物なんでしょうか？…：' + @ogpdescription
   erb :main
 end
 
@@ -114,6 +119,8 @@ get '/award' do
       ]
     }
   ]
+  @ogptitle = '受賞歴について：' + @title
+  @ogpdescription = '塙克樹の受賞歴。いくつか受賞しているので、それらをご紹介！…：' + @ogpdescription
   erb :main
 end
 
@@ -154,6 +161,7 @@ get '/contacts' do
       'main'=>'連絡は上記SNSよりよろしくお願いします。<br>メールアドレスや電話番号、LINE情報の公開はいたしておりません。'
     }
   ]
+  @ogptitle = '連絡先について：' + @title
   erb :main
 end
 
@@ -162,10 +170,15 @@ get '/talk' do
   @title = 'きゃりかつルーム'
   @contents = [
     {
+      'type'=>'h1',
+      'main'=>'発表歴、場所'
+    },
+    {
       'type'=>'h2',
       'main'=>'準備中'
     }
   ]
+  @ogptitle = '登壇について：' + @title
   erb :main
 end
 
@@ -311,6 +324,7 @@ get '/works/*' do |worksname|
     </p>
     <div class="video"><iframe src="https://www.youtube.com/embed/IjyW11fZpSU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
   elsif worksname == 'nowloading'
+    @place = '東京デザイナーズウィーク'
     @main_pic = '/img/nowloading3.png'
     @name = 'Now Loading'
     @date = '2016/11/02'
@@ -673,7 +687,8 @@ get '/works/*' do |worksname|
 
   if @contents
     @classname = worksname
-    @ogptitle = worksname + '：きゃりかつルーム'
+    @ogptitle = @name + '：きゃりかつルーム'
+    @ogpdescription = '塙克樹が関わった作品、作品名' + @name + 'について解説しています。：' + @ogpdescription
   end
 
   erb :works

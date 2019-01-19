@@ -110,12 +110,13 @@ get '/award' do
       'main_list'=>[
         ['発表場所', '賞', '作品名'],
         ['楽天温泉ハッカソン', '優勝', 'Gra-Navi'],
-        ['第3回早稲田地図アプリコンテスト', '若手科学者賞', 'Gra-Navi'],
+        ['早稲田大学主催第3回アプリケーションコンテスト', '若手科学者賞', 'Gra-Navi'],
         ['2016年電子情報通信学会MVE研究会', 'MVE賞', '磁性シートの磁力制御に基づく積層させた複数紙面への同時描画システム'],
         ['TECH LAB PAAK', 'TECH LAB PAAK賞', 'Delter'],
         ['Fintech Challenge 2016 – Bring Your Own Bank!', 'ぐらなび賞', 'API map for personalize'],
         ['エスキュービジム IoT×お笑いハッカソン', '技術があるで賞', 'た（わむ）れまく'],
-        ['第24回学生CGコンテスト', 'ファイナリスト', 'Gray Switch']
+        ['第24回学生CGコンテスト アート部門', 'ノミネート', 'Gray Switch'],
+        ['Wired主催Creative Hack Award', 'ファイナリスト', 'Gray Switch']
       ]
     }
   ]
@@ -251,7 +252,7 @@ get '/works/*' do |worksname|
     そういう課題をこのアプリケーションは解決する。
     </p>'
   elsif worksname == 'grayswitch'
-    @place = 'Grayscale展, 学生CGコンテスト, アジアデジタルアート大賞'
+    @place = 'Grayscale展, 第24回学生CGコンテストアート部門, Wired主催Creative Hack Award'
     @main_pic = '/img/gray-switch.jpg'
     @name = 'Gray Switch'
     @date = '2018/02/10'
@@ -278,8 +279,12 @@ get '/works/*' do |worksname|
         'uri' => 'https://youtu.be/IjyW11fZpSU'
       },
       {
-        'text' => '学生CGコンテスト',
+        'text' => '第24回学生CGコンテスト',
         'uri' => 'https://archive.campusgenius.jp/2018/works/410/'
+      },
+      {
+        'text' => 'Wired主催Creative Hack Award',
+        'uri' => 'https://hack.wired.jp/ja/finalist/'
       },
       {
         'text' => '北澤 優也',
@@ -324,7 +329,7 @@ get '/works/*' do |worksname|
     </p>
     <div class="video"><iframe src="https://www.youtube.com/embed/IjyW11fZpSU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
   elsif worksname == 'nowloading'
-    @place = '東京デザイナーズウィーク'
+    @place = '東京デザインウィーク2016'
     @main_pic = '/img/nowloading3.png'
     @name = 'Now Loading'
     @date = '2016/11/02'

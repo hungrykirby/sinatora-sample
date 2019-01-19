@@ -72,12 +72,13 @@ get '/about' do
       'type'=>'ul',
       'main_list'=>[
         '<span>楽天温泉ハッカソン</span><span>優勝</span>',
-        '<span>早稲田地図アプリコンテスト</span><span>若手科学者賞</span>',
+        '<span>早稲田大学主催第3回アプリケーションコンテスト</span><span>若手科学者賞</span>',
         '<span>電子情報通信学会MVE研究会</span><span>MVE賞</span>',
         '<span>TECH LAB PAAK</span><span>TECH LAB PAAK賞</span>',
         '<span>Fintech Challenge 2016 – Bring Your Own Bank!</span><span>ぐるなび賞</span>',
         '<span>エスキュービジム IoT×お笑いハッカソン</span><span>技術があるで賞</span>',
-        '<span>学生CGコンテスト</span><span>ファイナリスト</span>'
+        '<span>第24回学生CGコンテスト アート部門</span><span>ノミネート</span>',
+        '<span>Wired主催Creative Hack Award 2018</span><span>ファイナリスト</span>'
       ]
     },
     {
@@ -116,7 +117,7 @@ get '/award' do
         ['Fintech Challenge 2016 – Bring Your Own Bank!', 'ぐらなび賞', 'API map for personalize'],
         ['エスキュービジム IoT×お笑いハッカソン', '技術があるで賞', 'た（わむ）れまく'],
         ['第24回学生CGコンテスト アート部門', 'ノミネート', 'Gray Switch'],
-        ['Wired主催Creative Hack Award', 'ファイナリスト', 'Gray Switch']
+        ['Wired主催Creative Hack Award 2018', 'ファイナリスト', 'Gray Switch']
       ]
     }
   ]
@@ -252,7 +253,7 @@ get '/works/*' do |worksname|
     そういう課題をこのアプリケーションは解決する。
     </p>'
   elsif worksname == 'grayswitch'
-    @place = 'Grayscale展, 第24回学生CGコンテストアート部門, Wired主催Creative Hack Award'
+    @place = 'Grayscale展, 第24回学生CGコンテストアート部門, Wired主催Creative Hack Award 2018'
     @main_pic = '/img/gray-switch.jpg'
     @name = 'Gray Switch'
     @date = '2018/02/10'
@@ -283,7 +284,7 @@ get '/works/*' do |worksname|
         'uri' => 'https://archive.campusgenius.jp/2018/works/410/'
       },
       {
-        'text' => 'Wired主催Creative Hack Award',
+        'text' => 'Wired主催Creative Hack Award 2018',
         'uri' => 'https://hack.wired.jp/ja/finalist/'
       },
       {

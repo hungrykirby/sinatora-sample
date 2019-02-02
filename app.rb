@@ -252,6 +252,26 @@ get '/works/*' do |worksname|
     たとえば「この宿評価もいいし、よさそう！」と思ってもアクセスが悪く、断念をした経験がある人もいるのではないだろうか<br>
     そういう課題をこのアプリケーションは解決する。
     </p>'
+  elsif worksname == 'room'
+    @place = '---'
+    @main_pic = '/img/room.gif'
+    @name = 'きゃりかつルーム'
+    @date = '2018/01/14'
+    @role = 'エンジニア(Ruby、CSS、html、p5.js)'
+    @blcolor = 'rgb(121, 197, 253)'
+    @process = '最後までやりきったぞ…(順次追加予定)'
+    @categories = category_list.push('個人サイト', '自己満足')
+    @language = ['Ruby', 'html', 'CSS', 'p5.js']
+    @otherpics = ['/img/sketchjs.PNG']
+    @links = link_list.push(
+      {
+        'text'=>'Github',
+        'uri'=>'https://github.com/hungrykirby/sinatora-sample'
+      }
+    )
+    @contents = '<p>自己満足で作ろうとしたプロフィールサイト。<br>
+    Rubyの勉強用に作成している。フレームワークにsinatraを使っている。フロントにはp5.jsを使って装飾している。<br>
+    プロフィールサイトはwordpressで作ったほうが良いぞ…。</p>'
   elsif worksname == 'grayswitch'
     @place = 'Grayscale展, 第24回学生CGコンテストアート部門, Wired主催Creative Hack Award 2018'
     @main_pic = '/img/gray-switch.jpg'
@@ -260,7 +280,7 @@ get '/works/*' do |worksname|
     @role = 'Engineer (Chrome Addon Type Switch)'
     @blcolor = 'black'
     @categories = category_list.push('展示')
-    @language = ['python', 'node.js', 'Chrome Extension']
+    @language = ['Python', 'node.js', 'Chrome Extension']
     @members = member_list.push('北澤 優也', '油井 俊哉', '横田 智大')
     @links = link_list.push(
       {

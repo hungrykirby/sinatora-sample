@@ -272,6 +272,28 @@ get '/works/*' do |worksname|
     @contents = '<p>自己満足で作ろうとしたプロフィールサイト。<br>
     Rubyの勉強用に作成している。フレームワークにsinatraを使っている。フロントにはp5.jsを使って装飾している。<br>
     プロフィールサイトはwordpressで作ったほうが良いぞ…。</p>'
+  elsif worksname == 'ideanozokun'
+    @place = '---'
+    @main_pic = '/img/idea.png'
+    @name = 'アイデアのぞくん'
+    @date = '2018/01/14'
+    @role = 'エンジニア(Ruby、CSS、html、p5.js)'
+    @blcolor = 'rgb(121, 197, 253)'
+    @process = '製作途中'
+    @categories = category_list.push('LINE BOT', '自己満足', 'クリエイター支援')
+    @language = ['Python', 'html', 'CSS', 'Flask']
+    @otherpics = nil
+    @links = link_list.push(
+      {
+        'text'=>'Github',
+        'uri'=>'https://github.com/hungrykirby/lineIdeaBox'
+      }
+    )
+    @contents = '<p>自己満足で作ろうとしたLINE BOT<br>
+    "みんなの「あったら面白い気がするけど、別に金払って作るほどじゃないし、誰か気が乗った人が作ってくれるといいな」"を集めている。<br>
+    研究テーマも起業テーマも悩んだ経験や、研究室でアイデアが多くて実装しきれない人を見たことから作成した。</p>
+    <img style="width:200px;" src="http://qr-official.line.me/L/slqSwEZG-B.png"><br>
+    <a href="https://line.me/R/ti/p/%40wqp7452q"><img style="width:auto" height="36" border="0" alt="友だち追加" src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"></a>'
   elsif worksname == 'grayswitch'
     @place = 'Grayscale展, 第24回学生CGコンテストアート部門, Wired主催Creative Hack Award 2018'
     @main_pic = '/img/gray-switch.jpg'

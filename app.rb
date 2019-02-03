@@ -277,7 +277,7 @@ get '/works/*' do |worksname|
     @main_pic = '/img/idea.png'
     @name = 'アイデアのぞくん'
     @date = '2018/01/14'
-    @role = 'エンジニア(Ruby、CSS、html、p5.js)'
+    @role = 'エンジニア(Python)'
     @blcolor = 'rgb(121, 197, 253)'
     @process = '製作途中'
     @categories = category_list.push('LINE BOT', '自己満足', 'クリエイター支援')

@@ -278,7 +278,7 @@ get '/works/*' do |worksname|
     @name = 'アイデアのぞくん'
     @date = '2018/01/14'
     @role = 'エンジニア(Python)'
-    @blcolor = 'rgb(121, 197, 253)'
+    @blcolor = 'rgb(1, 185, 1)'
     @process = '製作途中'
     @categories = category_list.push('LINE BOT', '自己満足', 'クリエイター支援')
     @language = ['Python', 'html', 'CSS', 'Flask']

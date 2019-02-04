@@ -252,10 +252,42 @@ get '/works/*' do |worksname|
     たとえば「この宿評価もいいし、よさそう！」と思ってもアクセスが悪く、断念をした経験がある人もいるのではないだろうか<br>
     そういう課題をこのアプリケーションは解決する。
     </p>'
+  elsif worksname == 'nagara'
+    @place = '修士論文, インタラクション2018'
+    @main_pic = '/img/nagara3.png'
+    @name = 'ながらデバッグマスク:口の表情を入力としてソースコードの読み上げと バグの検出・記録が可能な仕組み'
+    @members = member_list.push('橋田朋子')
+    @date = '2018/01/14'
+    @role = 'エンジニアリング、論文執筆者'
+    @blcolor = 'rgb(121, 197, 253)'
+    @process = 'デモ発表'
+    @categories = category_list.push('論文', '研究', '学会')
+    @language = ['Pyhton', 'SVM', '機械学習', 'Processing', 'データビジュアライゼーション']
+    @otherpics = ['/img/nagara.jpg', '/img/nagare2.png']
+    @links = link_list.push(
+      {
+        'text'=>'Github',
+        'uri'=>'https://github.com/hungrykirby/maskQ2'
+      },
+      {
+        'text' => '橋田朋子研究室',
+        'uri' => 'http://tomokohashida.tumblr.com/'
+      },
+      {
+        'text' => 'インタラクション2018',
+        'url' => 'http://www.interaction-ipsj.org/2018/'
+      }
+    )
+    @contents = '<p>概要より引用：<br>
+    従来のプログラミング方法は手を動かしての入力とモニタからの視覚情報の提示を必要とする．
+    <br>本稿では，この問 題を解決するために，発声の伴わない口の表情を入力とし聴覚情報の提示でデバッグを行うシステムを提案する．<br>
+    外部に 音声に漏らすことなく使用可能な口の表情を 5 種類，マスク型デバイスで識別して，ソースコードの読み上げとバグの検 出および記録を操作するシステムを実装した．
+    <br>聴覚情報でのデバッグに関する予備検討とマスク型デバイスの精度実験 を行った．</p>'
   elsif worksname == 'room'
     @place = '---'
     @main_pic = '/img/room.gif'
     @name = 'きゃりかつルーム'
+    @members = member_list
     @date = '2018/01/14'
     @role = 'エンジニア(Ruby、CSS、html、p5.js)'
     @blcolor = 'rgb(121, 197, 253)'

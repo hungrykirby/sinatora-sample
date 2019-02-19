@@ -283,6 +283,29 @@ get '/works/*' do |worksname|
     <br>本稿では，この問 題を解決するために，発声の伴わない口の表情を入力とし聴覚情報の提示でデバッグを行うシステムを提案する．<br>
     外部に 音声に漏らすことなく使用可能な口の表情を 5 種類，マスク型デバイスで識別して，ソースコードの読み上げとバグの検 出および記録を操作するシステムを実装した．
     <br>聴覚情報でのデバッグに関する予備検討とマスク型デバイスの精度実験 を行った．</p>'
+  elsif worksname == 'negadegkun'
+    @place = 'ローカルで動かしながらテスト運用'
+    @main_pic = '/img/negadegree.jpg'
+    @name = 'ネガティブ診断くん'
+    @members = member_list
+    @date = '2017/01/07'
+    @role = 'エンジニア(node,js、openFrameworks)'
+    @blcolor = 'black'
+    @process = 'ローカルでテスト(何人かにベータ的に使用してもらう):凍結中'
+    @categories = category_list.push('Twitter bot', '自己満足')
+    @language = ['Twitter bot', 'node.js', 'openFrameworks', 'C++']
+    @otherpics = nil
+    @links = link_list.push(
+      {
+        'text'=>'Github',
+        'uri'=>'https://github.com/hungrykirby/negative_degrees'
+      }
+    )
+    @contents = '<p>Twitter Bot
+    <br>
+    ユーザからのリプライを受けて、直近数ツイートのポジティブ度を測定している。<br>
+    形態素解析で文章を分割し、単語ごとのプラマイを見ているだけなので、精度は悪い。<br>
+    なるべく感覚値に近づくよう、多項式の補正関数を導入して、調整している。</p>'
   elsif worksname == 'room'
     @place = '---'
     @main_pic = '/img/room.gif'

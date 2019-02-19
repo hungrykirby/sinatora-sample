@@ -288,7 +288,7 @@ get '/works/*' do |worksname|
     @main_pic = '/img/room.gif'
     @name = 'きゃりかつルーム'
     @members = member_list
-    @date = '2018/01/14'
+    @date = '2019/01/14'
     @role = 'エンジニア(Ruby、CSS、html、p5.js)'
     @blcolor = 'rgb(121, 197, 253)'
     @process = '最後までやりきったぞ…(順次追加予定)'
@@ -308,7 +308,7 @@ get '/works/*' do |worksname|
     @place = '---'
     @main_pic = '/img/idea.png'
     @name = 'アイデアのぞくん'
-    @date = '2018/01/14'
+    @date = '2019/01/14'
     @role = 'エンジニア(Python)'
     @blcolor = 'rgb(1, 185, 1)'
     @process = '製作途中'

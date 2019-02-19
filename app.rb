@@ -185,7 +185,7 @@ get '/talk' do
 end
 
 get '/works' do
-  redirect '/#works'
+  erb :works
 end
 
 get '/works/*' do |worksname|

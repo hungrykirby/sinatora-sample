@@ -293,19 +293,24 @@ get '/works/*' do |worksname|
     @blcolor = 'black'
     @process = 'ローカルでテスト(何人かにベータ的に使用してもらう):凍結中'
     @categories = category_list.push('Twitter bot', '自己満足')
-    @language = ['Twitter bot', 'node.js', 'openFrameworks', 'C++']
+    @language = ['Twitter bot', 'node.js', 'openFrameworks', 'C++', 'Python']
     @otherpics = nil
     @links = link_list.push(
       {
-        'text'=>'Github',
+        'text'=>'Github(node.js)',
         'uri'=>'https://github.com/hungrykirby/negative_degrees'
+      },
+      {
+        'text'=>'Github(Python)',
+        'uri'=>'https://github.com/hungrykirby/pydegadeg'
       }
     )
     @contents = '<p>Twitter Bot
     <br>
     ユーザからのリプライを受けて、直近数ツイートのポジティブ度を測定している。<br>
     形態素解析で文章を分割し、単語ごとのプラマイを見ているだけなので、精度は悪い。<br>
-    なるべく感覚値に近づくよう、多項式の補正関数を導入して、調整している。</p>'
+    なるべく感覚値に近づくよう、多項式の補正関数を導入して、調整していたが、関数に圧倒的誤りがあることが発見された。<br>
+    Pythonで書き換えたものの、鍵アカウントを取得できなかったり、補正関数がなかったりで、あんまりおもしろくないので止めている。</p>'
   elsif worksname == 'room'
     @place = '---'
     @main_pic = '/img/room.gif'
